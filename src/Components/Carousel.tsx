@@ -47,7 +47,7 @@ const Carousel = () => {
  
             {/* Navigation Buttons */}
             <button
-                className="absolute top-1/2 left-4 transform -translate-y-1/2 z-30 p-2 bg-gray-800/50 hover:bg-gray-800/80 rounded-full transition-all"
+                className="absolute top-1/2 left-4 transform -translate-y-1/2 z-30 p-2  hover:bg-gray-800/80 transition-all"
                 onClick={prevSlide}
             >
                 <svg className="w-6 h-6 text-white" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -55,7 +55,7 @@ const Carousel = () => {
                 </svg>
             </button>
             <button
-                className="absolute top-1/2 right-4 transform -translate-y-1/2 z-30 p-2 bg-gray-800/50 hover:bg-gray-800/80 rounded-full transition-all"
+                className="absolute top-1/2 right-4 transform -translate-y-1/2 z-30 p-2  hover:bg-gray-800/80  transition-all"
                 onClick={nextSlide}
             >
                 <svg className="w-6 h-6 text-white" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
