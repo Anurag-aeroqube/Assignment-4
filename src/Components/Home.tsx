@@ -60,7 +60,7 @@ const Home = () => {
       {/* on call cook */}
 
       <div className="flex flex-col md:flex-row justify-between py-10 items-center md:mb-8 md:mt-30 lg:px-20  lg:space-x-10">
-        <div className="md:w-1/2  lg:px-20">
+        <div className="md:w-1/2  lg:px-15">
           <h3 className="text-2xl sm:text-3xl text-center font-semibold mb-8 opacity-70 lg:px-20">On Call Cook</h3>
           <p className="text-gray-600 px-4 text-lg sm:text-xl text-center lg:px-5 opacity-70">
             Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
@@ -79,7 +79,7 @@ const Home = () => {
         <div className="md:w-1/2 p-15 md:px-30">
           <img src={laundary} alt="On Call Cook" className="w-full" />
         </div>
-        <div className="md:w-1/2   sm:p-4">
+        <div className="md:w-1/2 lg:px-15  sm:p-3">
           <h3 className="text-2xl sm:text-3xl text-center font-semibold opacity-70 mb-8">Laundary Services</h3>
           <p className="text-gray-600 text-lg sm:text-xl px-3 opacity-70">
             Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
@@ -91,22 +91,22 @@ const Home = () => {
       {/* facility cleaning services */}
 
       <div className="flex flex-col md:flex-row justify-between items-center mb-8 mt-30 lg:px-20  lg:space-x-10">
-        <div className="sm:w-1/2  lg:px-20">
-          <h3 className="text-2xl sm:text-3xl text-center font-semibold mb-8 opacity-70 lg:px-20">On Call Cook</h3>
+        <div className="sm:w-1/2  lg:px-15">
+          <h3 className="text-2xl sm:text-3xl text-center font-semibold mb-8 opacity-70 lg:px-20">Facility Cleaning Services</h3>
           <p className="text-gray-600 px-3 text-lg sm:text-xl lg:px-5 opacity-70">
             Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
           </p>
         </div>
         <div className="sm:1/2:w-1/2 px-10 sm:px-20">
-          <img src={cook} alt="On Call Cook" className="w-full" />
+          <img src={cleaning} alt="On Call Cook" className="w-full" />
         </div>
       </div>
 
 
       {/* maintance and repairs */}
 
-      <div className="flex flex-col md:flex-row items-center mb-8">
-        <div className="md:w-1/2 md:p-15 md:px-30">
+      <div className="flex flex-col md:flex-row items-center mb-8 lg:px-20">
+        <div className="md:w-1/2 lg:px-15">
           <img src={maintenance} alt="On Call Cook" className="w-full" />
         </div>
         <div className="md:w-1/2 py-10 md:p-4">
