@@ -8,7 +8,8 @@ import Villas from "./Components/Villas";
 import Services from "./Components/Services";
 // import Partners from "./Components/Partners";
 import Contact from "./Components/Contact";
-import Footer from './Components/Footer'
+import Partners from './Components/Partners'
+import VillasDetails from "./Components/VillasDetails";
 
 
 
@@ -39,8 +40,9 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/villas" element={<Villas />} />
         <Route path="/services" element={<Services />} />
-        {/* <Route path="/partners" element={<Partners />} /> */}
+        <Route path="/partners" element={<Partners />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/villasdetails" element={<VillasDetails/>} />
       </Routes>
       </Layout>
      

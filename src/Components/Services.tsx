@@ -8,7 +8,7 @@ function Services() {
   return (
     <div className=" p-4 sm:p-5">
 
-      <h2 className=" w-full  sm:w-200 sm:h-60 mx-auto mt-5 sm:mt-20 lg:mb-10 font-kanit text-lg lg:text-[44px] md:text-3xl font-medium lg:leading-[60px] md:leading-[40px] sm:text-zxl sm:leading-[24px] tracking-[0.1px] text-center text-[#373f41]">
+      <h2 className=" w-full  sm:w-200 sm:h-60 mx-auto mt-5 sm:mt-20 lg:mb-10 font-kanit text-lg lg:text-[44px] md:text-3xl font-medium lg:leading-[60px] md:leading-[40px] sm:text-xl sm:leading-[24px] tracking-[0.1px] text-center text-[#373f41]">
         “Our Team have Awesome handpicked <br /> Services
         for your next big group <br /> celebration, a romantic getaway <br />
         or peaceful sneak away”
