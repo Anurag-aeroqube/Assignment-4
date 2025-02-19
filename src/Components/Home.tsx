@@ -20,13 +20,13 @@ import Carousel from './Carousel';
 const Home = () => {
   return (
     <div className='py-1'>
-      <div className="w-full  bg-[#3c64b1]/5 ">
+      <div className="w-full  bg-[#3c64b1]/6">
         <div className="sm:px-5 py-5  px-1 lg:px-30 lg:pt-20 pb-10">
           <div className='px-3 sm:px-10'>
-            <h1 className="font-kanit text-center lg:px-40 text-xl sm:text-2xl sm:space-x-2 text-[#373f41]  md:text-3xl lg:text-[44px]   leading-snug tracking-wide ">
+            <h1 className="font-kanit text-center lg:px-36 text-xl sm:text-2xl sm:space-x-2 text-[#373f41] md:px-16 md:text-3xl lg:text-[44px]   lg:leading-[65px] md:leading-[52px] lg:tracking-[1px] ">
               Take your <span className="font-medium">real estate</span> experience to new heights in the <span className="font-medium">Himalayas</span>
             </h1>
-            <p className="text-center text-base sm:text-lg lg:px-56 font-mulish lg:text-[20px]  text-[#737b7d] mt-4">
+            <p className="text-center text-base sm:text-lg lg:px-36 font-mulish lg:text-[20px] md:px-28 px-6  text-[#737b7d] mt-4">
               Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad, nam no suscipit quaerendum. At nam minimum ponderum. Est audiam animal molestiae te.
             </p>
 
@@ -43,11 +43,11 @@ const Home = () => {
       {/* about us section */}
 
       <section id="about" className="lg:p-10  text-center">
-        <div className="max-w-7xl mx-auto flex flex-col lg:pl-20 sm:flex-row items-start w-full mt-20 ">
+        <div className="max-w-7xl mx-auto flex flex-col lg:pl-20 sm:flex-row items-start w-full mt-20 md:pl-8">
           <img src={about} className="w-full sm:w-1/2  lg:pl-16 lg:pr-12 object-fill md:pl-3 rounded-lg " alt="About Villa" />
-          <div className="md:w-2/3  md:pb-10   lg:pr-28 sm:text-left ">
+          <div className="md:w-2/3  md:pb-10   lg:pr-28 sm:text-left md:px-10  ">
             <h3 className=" text-2xl lg:text-[32px] text-[#373f41] font-kanit mb-3 md:text-left text-center mt-1">About Us</h3>
-            <p className="text-[#737b7d] font-mulish text-base md:text-[14px] px-2 lg:text-[18px] md:leading-[1.5]">
+            <p className="text-[#737b7d] font-mulish text-base md:text-[16px] px-2 lg:text-[18px] md:leading-[1.5]">
               Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
             </p>
           </div>

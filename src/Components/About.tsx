@@ -8,10 +8,10 @@ const About = () => {
     return (
         <div>
 
-            <section className='lg:py-20 md:py-15  py-5'>
+            <section className='lg:py-16 md:py-15  py-5'>
                 <div className='lg:p-10 md:p-3 p-1'>
-                    <div className='items-center lg:px-40 md:px-20 sm:px-5 px-3 '>
-                        <p className='font-kanit text-center text-[#373f41] text-xl sm:text-[18px] md:text-[24px] lg:text-[32px]'>Welcome To VillaCrest</p>
+                    <div className='items-center lg:px-40 md:px-20 sm:px-8 px-3 '>
+                        <p className='font-kanit text-center text-[#373f41] text-xl sm:text-[20px] md:text-[24px] lg:text-[32px]'>Welcome To VillaCrest</p>
                         <div className='lg:mt-[22px] md:mt-4 lg:px-[175px]  mt-2'>
                             <p className='font-mulish text-[#737b7d] md:text-[18px] text-base text-center'>Vacations are crucial for the souls and when that experience doesn’t go as planned, you can’t get that time back.</p>
                         </div>
