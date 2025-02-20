@@ -29,7 +29,7 @@ export default function Villas() {
   const navigate = useNavigate();
  
   const handleClick = () => {
-    navigate(`/villasdetails/${id}`);
+    navigate(`/villasdetails`);
   };
   return (
     <section className='w-full my-[4rem] '>
@@ -42,7 +42,7 @@ export default function Villas() {
  
         <div className='grid grid-cols-1 space-y-5 gap-8  sm:grid-cols-2 lg:grid-cols-3 sm:space-y-15 md:space-y-35'>
           {villas.map((villa) => (
-            <section key={villa.id} className="relative h-[350px] sm:h-[275px] cursor-pointer" onClick={() => handleClick(villa.id)}>
+            <section key={villa.id} className="relative h-[350px] sm:h-[275px] cursor-pointer" onClick={() => handleClick()}>
               {/* Image */}
               <figure className="shadow-md">
                 <img src={villa.image} alt={villa.title} className=" w-full object-cover rounded-md" />

@@ -5,16 +5,16 @@ import vector from '../assets/Vector.svg'
 import facebook from '../assets/Group 3037.svg'
 import instragram from '../assets/Group 3038.svg'
 import youtube from '../assets/Group 3200.svg'
-
+ 
 function Contact() {
   return (
     <div className="md:relative items-center  md:px-20 lg:px-30 xl:px-42 py-20" >
-
-
+ 
+ 
       <div className="contact-container flex flex-col md:flex-row items-center justify-center gap-30 sm:p-10  md:pt-0 pt-10 bg-[#e2eaff] md:relative">
-
-
-        <div className="contact-details md:absolute  bg-white shadow-xl  md:w-[45%] md:h-[65%]
+ 
+ 
+        <div className="contact-details md:absolute  bg-white shadow-xl   md:w-[45%] md:h-[65%]
                         left-[-7%]  md:transform-translate-y-1/2
                          border border-gray-200 w-[90%] mx-auto  " >
           <div className="p-10">
@@ -24,31 +24,31 @@ function Contact() {
                 <img src={locationpin} className="mt-2"></img>
                 <p className=" text-[#4b4b6d] text-left  font-mulish sm:text-[24px] text-[20px]  ">1187 Lake Forest City,<br /> Uttarakhand, 110006, India</p>
               </div>
-
+ 
               <div className="flex flex-row space-x-3">
                 <img src={vector}></img>
                 <p className="text-[#4b4b6d] text-left font-mulish sm:text-[24px] text-[20px]"> support@villacrest.in</p>
               </div>
-
+ 
               <div className="flex flex-row space-x-3">
                 <img src={message}></img>
                 <p className="text-[#4b4b6d] text-left font-mulish sm:text-[24px] text-[20px]"> +91-9910014421, 9891149697</p>
               </div>
-
-
-
+ 
+ 
+ 
             </div>
-
+ 
             <div className="flex mt-7 space-x-4 mt-4 items-left">
               <img src={instragram} alt="" />
               <img src={youtube} alt="" />
               <img src={facebook} alt="" />
             </div>
           </div>
-
+ 
         </div>
-
-
+ 
+ 
         <div className="md:w-1/3 h-[1%] "></div>
         <div className="md:p-2 md:w-[60%] mt-13">
           <h2 className=" font-kanit text-[#002856] text-[42px] md:text-left text-center font-medium">Get in Touch</h2>
@@ -65,5 +65,5 @@ function Contact() {
     </div>
   );
 }
-
+ 
 export default Contact;

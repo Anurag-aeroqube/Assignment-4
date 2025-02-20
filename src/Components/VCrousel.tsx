@@ -28,7 +28,7 @@ const VCarousel = () => {
   };
  
   return (
-    <div className="relative w-full h-full mx-auto overflow-hidden rounded-lg shadow-lg">
+    <div className="relative w-full h-full mx-auto overflow-hidden  shadow-lg">
       {/* Image Display */}
       <div className="relative">
         <img
