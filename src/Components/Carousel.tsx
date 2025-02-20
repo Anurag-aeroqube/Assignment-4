@@ -47,19 +47,19 @@ const Carousel = () => {
  
             {/* Navigation Buttons */}
             <button
-                className="absolute top-1/2 left-4 transform -translate-y-1/2 z-30 p-2  hover:bg-gray-800/80 transition-all"
+                className="absolute top-1/2 left-4 transform -translate-y-1/2 z-30 p-2  hover:bg-gray-800/30 transition-all"
                 onClick={prevSlide}
             >
-                <svg className="w-6 h-6 text-white" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" d="M5 1L1 5l4 4"/>
+                <svg className="w-8 h-8 text-white" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke="currentColor" strokeWidth="2"   d="M5 1L1 5l4 4"/>
                 </svg>
             </button>
             <button
-                className="absolute top-1/2 right-4 transform -translate-y-1/2 z-30 p-2  hover:bg-gray-800/80  transition-all"
+                className="absolute top-1/2 right-4 transform -translate-y-1/2 z-30 p-2  hover:bg-gray-800/30  transition-all"
                 onClick={nextSlide}
             >
-                <svg className="w-6 h-6 text-white" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" d="M1 9l4-4-4-4"/>
+                <svg className="w-8 h-8 text-white" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke="currentColor" strokeWidth="2"  d="M1 9l4-4-4-4"/>
                 </svg>
             </button>
         </div>

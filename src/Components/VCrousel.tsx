@@ -33,7 +33,7 @@ const VCarousel = () => {
       <div className="relative">
         <img
           src={images[currentIndex]}
-          className="block w-full h-full object-contain"
+          className="block w-[730px] h-[500px] object-contain"
           alt={`Slide ${currentIndex + 1}`}
         />
       </div>
