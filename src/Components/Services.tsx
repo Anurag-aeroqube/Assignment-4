@@ -15,76 +15,84 @@ function Services() {
       </h2>{/*  call cook hai */}
 
 
-      <section className='py-10' >
-        <div className="flex flex-col md:flex md:flex-row justify-between md:px-20 py-10 items-center md:h-[404px]   ">
-          <div className="md:w-1/2  lg:pl-32 md:text-left px-3 ">
-            <h3 className="  lg:text-[32px] text-[#373f41] mb-6 text-2xl md:text-left text-center font-kanit ">On Call Cook</h3>
-            <p className="text-[#737b7d] font-mulish lg:text-[20px]  ">
-              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-            </p>
+      <section className='lg:py-14 sm:py-10' >
+        <article className='w-full'>
+          <div className='lg:w-[70%] w-[80%] mx-auto flex lg:flex-row flex-col  md:justify-between'>
+            <header className='lg:w-[50%] py-20 space-y-8'>
+              <p className='text-[#373f41] font-kanit text-[32px] leading-[40px] lg:text-left text-center tracking-[0.1px]'>On Call Cook</p>
+              <p className='font-mulish text-[20px] text-[#737b7d] leading-[32px] tracking[0.3px] '>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+            </header>
+            <figure className='lg:w-[50%] '>
+              <img src={cook} className=' w-[70%] mx-auto lg:ml-30'></img>
+            </figure>
+
           </div>
-          <div className=" md:w-1/2 md:px-12 px-2 mt-3 ">
-            <img src={cook} alt="On Call Cook" className=" md:w-fit  w-full mx-auto" />
-          </div>
-        </div>
+        </article>
 
       </section>
 
 
       {/* 
-      laundary services hai */}
+      laundary services */}
 
 
-      <section className='py-10 ' >
-        <div className="flex flex-col md:flex md:flex-row justify-between lg:px-20 lg:py-10 items-center lg:h-[399px] px-3   ">
-          <div className=" md:w-1/2 lg:pl-36 md:px-12 ">
-            <img src={laundary} alt="On Call Cook" className=" md:w-fit w-full mx-auto" />
+<section className='lg:py-14 sm:py-10' >
+        <article className='w-full'>
+       
+          <div className='lg:w-[70%] w-[80%] mx-auto flex lg:flex-row flex-col-reverse  md:justify-between'>
+          <figure className='lg:w-[50%] '>
+              <img src={laundary} className='w-[70%] mx-auto '></img>
+            </figure>
+
+            <header className='lg:w-[50%] py-20 space-y-8'>
+              <p className='text-[#373f41] font-kanit text-[32px] leading-[40px] lg:text-left text-center tracking-[0.1px]'>Laundary Services</p>
+              <p className='font-mulish text-[20px] text-[#737b7d] leading-[32px] tracking[0.3px] '>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+            </header>
+            
+
           </div>
-          <div className="md:w-1/2  lg:pr-20  md:pr-18 lg:pl-3 md:text-left mt-10 ">
-            <h3 className="  lg:text-[32px] text-[#373f41] mb-8 font-kanit md:text-left text-center text-2xl">Laundary Services</h3>
-            <p className="text-[#737b7d] font-mulish lg:text-[20px] tracking-[0.3px]  ">
-              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-            </p>
-          </div>
-
-        </div>
+        </article>
 
       </section>
 
 
-      {/* facility cleaning services hai */}
+      {/* facility cleaning services */}
 
-      <section className='py-10' >
-        <div className="flex flex-col md:flex-row justify-between lg:px-20 py-10 items-center lg:h-[404px] px-3  ">
-          <div className="md:w-1/2    md:text-left text-center lg:pl-30 md:pl-20">
-            <h3 className="  lg:text-[32px] text-[#373f41] mb-8 font-kanit text-2xl ">Facility Cleaning Services</h3>
-            <p className="text-[#737b7d] font-mulish lg:text-[20px]  ">
-              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-            </p>
+      <section className='lg:py-14 sm:py-10' >
+        <article className='w-full'>
+          <div className='lg:w-[70%] w-[80%] mx-auto flex lg:flex-row flex-col  md:justify-between'>
+            <header className='lg:w-[50%] py-20 space-y-8'>
+              <p className='text-[#373f41] font-kanit text-[32px] leading-[40px] lg:text-left text-center tracking-[0.1px]'>Facility Cleaning Services</p>
+              <p className='font-mulish text-[20px] text-[#737b7d] leading-[32px] tracking[0.3px] '>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+            </header>
+            <figure className='lg:w-[50%] '>
+              <img src={Cleaning} className='lg:w-[70%] w-[70%] mx-auto lg:ml-30'></img>
+            </figure>
+
           </div>
-          <div className=" md:w-1/2 mt-5 sm:px-20 md:px-14">
-            <img src={Cleaning} alt="On Call Cook" className=" md:w-fit w-full mx-auto" />
-          </div>
-        </div>
+        </article>
 
       </section>
 
 
-      {/* maintance and repairs  hai*/}
+      {/* maintance and repairs */}
 
-      <section className='py-10 ' >
-        <div className="flex flex-col md:flex-row justify-between md:px-20 lg:py-10 items-center lg:h-[316px]   ">
-          <div className=" md:w-1/2 md:pl-14 md:pr-12 lg:pl-25 lg:pr-20 ">
-            <img src={Maintenance} alt="On Call Cook" className="md:w-fit w-full mx-auto " />
-          </div>
-          <div className="md:w-1/2  lg:pr-20  md:pl-5 md:text-left lg:pl-5 text-center pt-8 px-2">
-            <h3 className="  lg:text-[32px] text-[#373f41] mb-8  text-2xl font-kanit ">Maintenance & Repairs</h3>
-            <p className="text-[#737b7d] font-mulish lg:text-[20px]  tracking-[0.1px]">
-              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-            </p>
-          </div>
+      <section className='lg:py-14 py-10 mb-20 ' >
+        <article className='w-full'>
+       
+          <div className='lg:w-[70%] w-[80%] mx-auto flex lg:flex-row flex-col-reverse gap-x-5 lg:justify-between'>
+          <figure className='lg:w-[48%] mx-auto sm:pt-0 pt-10 '>
+              <img src={Maintenance} className='w-[90%]  my-auto '></img>
+            </figure>
 
-        </div>
+            <header className='lg:w-[52%]   space-y-8'>
+              <p className='text-[#373f41] font-kanit text-[32px] leading-[40px] lg:text-left text-center tracking-[0.1px]'>Maintenance & Repairs</p>
+              <p className='font-mulish text-[20px] text-[#737b7d] leading-[32px] tracking[0.3px] '>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+            </header>
+            
+
+          </div>
+        </article>
 
       </section>
 

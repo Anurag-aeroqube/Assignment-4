@@ -2,8 +2,10 @@ import image1 from "../assets/gallery-1.png"
 import image2 from "../assets/gallery-2.png"
 import image3 from "../assets/gallery-3.png"
 import image4 from "../assets/2.png"
-import image5 from "../assets/2.png"
-import image6 from "../assets/2.png"
+import image5 from "../assets/9.png"
+import image6 from "../assets/7.png"
+import image7 from "../assets/8.png"
+import image8 from "../assets/5.png"
 import logo1 from '../assets/Group (3).svg'
 import logo2 from '../assets/Group (4).svg'
 import logo3 from '../assets/Group (5).svg'
@@ -14,7 +16,7 @@ import logo7 from '../assets/Group (9).svg'
 
 
 
-const imageArr=[image1,image2,image3,image4,image5,image6,image3,image5];
+const imageArr=[image1,image2,image3,image4,image5,image6,image8,image7,image3,image4];
 const descData={
     description:[
         "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",

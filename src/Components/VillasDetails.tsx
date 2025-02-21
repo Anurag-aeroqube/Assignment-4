@@ -15,75 +15,103 @@ import SideImages from '../Components/Villasimages';
 
 
 const DetailedVila = () => {
-    const { id } = useParams(); 
-    const villa = villas.find((v) => v.id === Number(id)); 
-    const [activeSection, setActiveSection] = useState('description');
-  
-    if (!villa) {
-      return <h1>Villa Not Found</h1>;
-    }
+  const { id } = useParams();
+  const villa = villas.find((v) => v.id === Number(id));
+  const [activeSection, setActiveSection] = useState('description');
 
-    return (
-      <>
+  if (!villa) {
+    return <h1>Villa Not Found</h1>;
+  }
+
+  return (
+    <>
       <section className='w-full  mb-[8rem] mt-[5rem]'>
-        <article className='w-[70%] mx-auto flex  '>
-          <aside className='w-full mx-auto'>
-              <section className='w-fit mx-auto'>
-                  <VCrousel/>
-              </section>
-              <section className='w-full h-[217px] shadow-lg'>
-              <article className="flex flex-col gap-3 p-20 mt-20">
-                    <header className="flex justify-between font-bold">
-                      <h1 className="font-nunitosans font-bold text-[28px] text-[#3e3e3e] leading-[27.2px]">{villa.title}</h1>
-                      <h1 className="font-nunitosans font-bold text-[28px] text-[#ffa800] leading-[27.2px]">{villa.price}</h1>
-                    </header>
-  
-                    <p className="text-left font-nunitosans text-[#aeaeae] text-[22px]"><img src={loc} className="inline" />{villa.address}</p>
-                    <footer className="flex justify-between text-sm">
-                      <p className="text-left font-semibold font-nunitosans text-[#626262] text-[22px]"><img src={bathtub} className="inline" /> {villa.bath}</p>
-                      <p className="text-left font-semibold font-nunitosans text-[#626262] text-[22px]"><img src={room} className="inline" /> {villa.beds}</p>
-                      <p className="text-left font-semibold font-nunitosans text-[#626262] text-[22px]"><img src={house} className="inline" /> {villa.size}</p>
-                    </footer>
-                  </article>
-              </section>
-  
-              <section className='h-15 flex justify-around items-center bg-[#f4f4f4] w-full mt-15'>
-              <h1 
-                      className={`py-3 cursor-pointer font-mulish text-[18px] font-bold text-[#8a8a8a] ${activeSection === 'description' ? 'text-[#181725] border-b-4 border-[#6d87cb]' : ''}`} 
-                      onClick={() => setActiveSection('description')}
-                  >
-                      DESCRIPTION
+        <article className='lg:w-[65%] xl:mx-50 lg:mx-40 flex lg:flex-row flex-col mx-auto lg:gap-x-8 w-[96%] '>
+          <aside className='w-full  mx-auto'>
+            <section className='mx-auto'>
+              <VCrousel />
+            </section>
+
+
+            <section className='w-full mx-auto '>
+              <article className="flex flex-col gap-5 shadow-[rgba(0,0,0,0.07)] shadow-lg sm:p-7 p-4 mt-10">
+                <header className="flex justify-between  font-bold">
+                  <h1 className="font-Nunito-Sans font-bold md:text-[28px] sm:text-[24px] text-[20px] text-[#3e3e3e] md:leading-[47.6px]">
+                    {villa.title}
                   </h1>
-                  <h1 
-                      className={` py-3 cursor-pointer font-mulish text-[18px] font-bold text-[#8a8a8a] ${activeSection === 'layout' ? 'text-[#181725] border-b-4 border-[#6d87cb]' : ''}`} 
-                      onClick={() => setActiveSection('layout')}
-                  >
-                      PROPERTY LAYOUT
+                  <h1 className="font-Nunito-Sans font-bold d:text-[28px] sm:text-[24px] text-[20px] text-[#ffa800] md:leading-[47.6px]">
+                    {villa.price}
                   </h1>
-  
-                  <h1 
-                      className={`py-3 cursor-pointer font-mulish text-[18px] font-bold text-[#8a8a8a] ${activeSection === 'amenities' ? 'text-[#181725] border-b-4 border-[#6d87cb]' : ''}`} 
-                      onClick={() => setActiveSection('amenities')}
-                  >
-                      AMENITIES
-                  </h1>
-              </section>
-              <section className="w-full">
-  {activeSection === "layout" && <AboutSection layout={villa.desc.layout} />}
-  {activeSection === "description" && <DescriptionSection desc={villa.desc.desc} />}
-  {activeSection === "amenities" && <Amenities amenities={villa.desc.aminities} />}
-</section>
+                </header>
+                <figure className='flex flex-row  gap-x-2'>
+                  <img src={loc} className="sm:w-[2.5%] w-[4%]" />
+                  <p className="text-left font-Nunito-Sans text-[#aeaeae] sm:text-[22px] text-[16px]">{villa.address}</p>
+                </figure>
+                <footer className="flex  xl:w-[60%] justify-between lg:w-[90%] sm:w-[60%] w-[100%]  text-sm">
+
+                  <figure className='flex flex-row xl:gap-x-2'>
+                    <img src={bathtub} className="" /> 
+                    <p className="text-left font-semibold font-Nunito-Sans text-[#626262]  text-[16px] sm:text-[22px]">{villa.bath}
+                    </p>
+                  </figure>
+
+                  <figure className='flex flex-row gap-x-2'>
+                    <img src={room} className="" />
+                    <p className="text-left font-semibold font-Nunito-Sans text-[#626262]  text-[16px] sm:text-[22px]"> {villa.beds}
+                    </p>
+                  </figure>
+
+
+                  <figure className='flex flex-row gap-x-2'>
+                    <img src={house} className="" /> 
+                    <p className="text-left font-semibold font-Nunito-Sans text-[#626262]  text-[16px] sm:text-[22px]">{villa.size}
+                    </p>
+                  </figure>
+                </footer>
+
+              </article>
+            </section>
+
+
+            <section className='h-15 flex justify-around items-center gap-x-1 bg-[#f4f4f4] w-full mt-16'>
+
+              <h1
+                className={` py-3 cursor-pointer font-mulish xl:text-[18px] sm:text-[16px] text-[12px]  font-semibold text-[#8a8a8a] ${activeSection === 'layout' ? 'text-[#181725] border-b-3 border-[#6d87cb]' : ''}`}
+                onClick={() => setActiveSection('layout')}
+              >
+                PROPERTY LAYOUT
+              </h1>
+
+              <h1
+                className={`py-3 cursor-pointer font-mulish xl:text-[18px] sm:text-[16px] text-[12px]   font-semibold text-[#8a8a8a] ${activeSection === 'description' ? 'text-[#181725] border-b-3 border-[#6d87cb]' : ''}`}
+                onClick={() => setActiveSection('description')}
+              >
+                DESCRIPTION
+              </h1>
+
+              <h1
+                className={`py-3 cursor-pointer font-mulish xl:text-[18px] sm:text-[16px] text-[12px]  font-semibold text-[#8a8a8a] ${activeSection === 'amenities' ? 'text-[#181725] border-b-3 border-[#6d87cb]' : ''}`}
+                onClick={() => setActiveSection('amenities')}
+              >
+                AMENITIES
+              </h1>
+            </section>
+            <section className="w-full">
+              {activeSection === "description" && <AboutSection layout={villa.desc.layout} />}
+              {activeSection === "layout" && <DescriptionSection desc={villa.desc.desc} />}
+              {activeSection === "amenities" && <Amenities amenities={villa.desc.aminities} />}
+            </section>
 
 
           </aside>
-          <aside className="w-[30%]">
-            
+          <aside className="w-[35%] h-[500px]  lg:block overflow-x-hidden overflow-y-scroll">
   <SideImages images={villa.images} />
 </aside>
 
+
         </article>
       </section>
-      </>
+    </>
   )
 }
 

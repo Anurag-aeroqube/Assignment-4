@@ -7,15 +7,23 @@ function Navbar() {
 
   return (
     <nav className="shadow-sm sm:p-4 p-3 items-center bg-[#3c64b1]/6">
-      <div className="flex flex:row sm:justify-center">
-        <div className="md:px-8 sm:px-4 lg:px-20 w-1/4">
+      <div className="flex flex:row sm:justify-center  sm:gap-x-20 lg:gap-x-20">
+        <div className=" md:w-1/4 ">
           {/* Logo ko clickable banaya aur Link wrap kiya */}
-          <Link to="/home">
-            <img src={villacrest} alt="Villa Crest Logo" className="cursor-pointer" />
+          <figure className="sm:w-[70%] md:w-[80%] xl:mx-20 sm:px-0 w-[100%] mx-auto  sm:my-2 ">
+            <div className="">
+            <Link to="/home">
+            <img src={villacrest} alt="Villa Crest Logo" className="sm:w-full md:w-[70%] xl:w-[55%] sm:mx-auto  w-[60%] cursor-pointer " />
           </Link>
+
+            </div>
+          
+
+          </figure>
+         
         </div>
 
-        <ul className="hidden sm:flex lg:px-40 md:px-7 sm:space-x-3 pl-20 items-center md:space-x-6 lg:space-x-10 sm:text-sm">
+        <ul className="hidden sm:flex xl:px-40  sm:space-x-3  items-center md:space-x-6 lg:space-x-8 sm:text-sm">
           <li>
             <Link
               to="/home"

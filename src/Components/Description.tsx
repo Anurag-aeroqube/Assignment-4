@@ -8,7 +8,7 @@ interface DescriptionSectionProps {
 const DescriptionSection: React.FC<DescriptionSectionProps> = ({ desc }) => {
   return (
     <div className="flex flex-col mt-[60px]">
-      <h1 className="font-mulish font-bold text-left text-[24px] my-">
+      <h1 className="font-mulish font-bold text-center lg:text-left text-[24px] my-">
         Description:
       </h1>
 
@@ -23,7 +23,7 @@ const DescriptionSection: React.FC<DescriptionSectionProps> = ({ desc }) => {
       <section>
         <article className="flex flex-col items-start justify-start w-full">
           <div className="text-left py-2">
-            <span className="font-mulish font-bold text-[24px] text-[#373f41]">
+            <span className="font-mulish font-bold text-[24px]  text-start text-[#373f41]">
               Address: 
             </span>
             <p className="font-mulish font-semibold text-[20px] text-[#737b7d] inline">

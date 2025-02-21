@@ -10,10 +10,10 @@ const Villas = () => {
       <section className='w-full my-[5rem] '>
         <article className='w-[85%] mx-auto'>
           <article className="mb-[4.35rem] text-center">
-            <h1 className="font-kanit text-[2rem] text-headColor">
+            <h1 className="font-kanit text-[2rem] text-[#373f41]">
               Let's explore the villas
             </h1>
-            <h1 className="font-kanit text-[2rem] text-headColor">
+            <h1 className="font-kanit text-[2rem] text-[#373f41]">
               of your dreams
             </h1>
           </article>
