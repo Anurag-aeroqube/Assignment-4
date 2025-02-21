@@ -26,8 +26,8 @@ const DetailedVila = () => {
   return (
     <>
       <section className='w-full  mb-[8rem] mt-[5rem]'>
-        <article className='lg:w-[65%] xl:mx-50 lg:mx-40 flex lg:flex-row flex-col mx-auto lg:gap-x-8 w-[96%] '>
-          <aside className='w-full  mx-auto'>
+        <article className='lg:w-[80%]  flex lg:flex-row flex-col mx-auto gap-x-5 w-[96%] '>
+          <aside className='w-[70%]  mx-auto'>
             <section className='mx-auto'>
               <VCrousel />
             </section>
@@ -104,7 +104,7 @@ const DetailedVila = () => {
 
 
           </aside>
-          <aside className="w-[35%] h-[500px]  lg:block overflow-x-hidden overflow-y-scroll">
+          <aside className="hidden w-[30%] h-[520px]  lg:block overflow-x-hidden overflow-y-scroll">
   <SideImages images={villa.images} />
 </aside>
 

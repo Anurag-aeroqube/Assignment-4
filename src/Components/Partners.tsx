@@ -1,79 +1,118 @@
+import { useState } from 'react';
+import villas from '../VillasData/Data';
+import { useParams } from 'react-router-dom';
 
- 
-import React from 'react'
- 
-const PropertyLayout = () => {
+import VCrousel from '../Components/VCrousel'
+
+import loc from '../assets/location-pin.svg'
+import bathtub from '../assets/bathtub.svg'
+import room from '../assets/double-bed.svg'
+import house from '../assets/measured.svg'
+import DescriptionSection from '../Components/Description'
+import AboutSection from '../Components/PropertyLayout'
+import Amenities from '../Components/Ammenties'
+import SideImages from '../Components/Villasimages';
+
+
+const DetailedVila = () => {
+  const { id } = useParams();
+  const villa = villas.find((v) => v.id === Number(id));
+  const [activeSection, setActiveSection] = useState('description');
+
+  if (!villa) {
+    return <h1>Villa Not Found</h1>;
+  }
+
   return (
-    <div className='flex flex-col mt-[60px]'>
-    <h1 className='font-mulish font-bold text-left text-[24px] '>Description:</h1>
- 
-    <ol className=' list-decimal text-[#737b7d] pl-4 mt-7'>
-        <li className='py-3 font-mulish text-left text-[18px] text-[#737b7d]'>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</li>
- 
-        <li className='py-3 font-mulish text-left text-[18px] text-[#737b7d]'>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</li>
- 
-        <li className='py-3 font-mulish text-left text-[18px] text-[#737b7d]'>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</li>
- 
-        <li className='py-3 font-mulish text-left text-[18px] text-[#737b7d]'>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</li>
- 
-        <li className='py-3 font-mulish text-left text-[18px] text-[#737b7d]'>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</li>
-    </ol>
- 
-    <section>
-    <article className='flex flex-col items-start justify-start w-full'>
-  <div className='text-left py-2'>
-    <span className='font-mulish font-bold text-[24px] text-[#373f41]'>Address : </span>
-    <p className='font-mulish font-semibold text-[20px] text-[#737b7d] inline'>
-      HOUSE NO.- 99, THAPLIYA MAEHRA , Vijraula, Naukukichiatal
-    </p>
-  </div>
-  <hr className="w-full border-t border-[#eaeaea]" />
-</article>
- 
-<article className='flex flex-col items-start justify-start w-full'>
-  <div className='text-left py-2'>
-    <span className='font-mulish font-bold text-[24px] text-[#373f41]'>Contact No. : </span>
-    <p className='font-mulish font-semibold text-[20px] text-[#737b7d] inline'>
-     8747593736
-    </p>
-  </div>
-  <hr className="w-full border-t border-[#eaeaea]" />
-</article>
- 
-<article className='flex flex-col items-start justify-start w-full'>
-  <div className='text-left py-2'>
-    <span className='font-mulish font-bold text-[24px] text-[#373f41]'>Beds : </span>
-    <p className='font-mulish font-semibold text-[20px] text-[#737b7d] inline'>
-    06 Beds
-    </p>
-  </div>
-  <hr className="w-full border-t border-[#eaeaea]" />
-</article>
- 
-<article className='flex flex-col items-start justify-start w-full'>
-  <div className='text-left py-2'>
-    <span className='font-mulish font-bold text-[24px] text-[#373f41]'>Check In : </span>
-    <p className='font-mulish font-semibold text-[20px] text-[#737b7d] inline'>
-      08
-    </p>
-  </div>
-  <hr className="w-full border-t border-[#eaeaea]" />
-</article>
- 
- 
-<article className='flex flex-col items-start justify-start w-full'>
-  <div className='text-left py-2'>
-    <span className='font-mulish font-bold text-[24px] text-[#373f41]'>Check Out : </span>
-    <p className='font-mulish font-semibold text-[20px] text-[#737b7d] inline'>
-      12
-    </p>
-  </div>
-  <hr className="w-full border-t border-[#eaeaea]" />
-</article>
-    </section>
-    </div>
-   
+    <>
+      <section className='w-full  mb-[8rem] mt-[5rem]'>
+        <article className='lg:w-[65%] xl:mx-50 lg:mx-40 flex lg:flex-row flex-col mx-auto lg:gap-x-8 w-[96%] '>
+          <aside className='w-full  mx-auto'>
+            <section className='mx-auto'>
+              <VCrousel />
+            </section>
+
+
+            <section className='w-full mx-auto '>
+              <article className="flex flex-col gap-5 shadow-[rgba(0,0,0,0.07)] shadow-lg sm:p-7 p-4 mt-10">
+                <header className="flex justify-between  font-bold">
+                  <h1 className="font-Nunito-Sans font-bold md:text-[28px] sm:text-[24px] text-[20px] text-[#3e3e3e] md:leading-[47.6px]">
+                    {villa.title}
+                  </h1>
+                  <h1 className="font-Nunito-Sans font-bold d:text-[28px] sm:text-[24px] text-[20px] text-[#ffa800] md:leading-[47.6px]">
+                    {villa.price}
+                  </h1>
+                </header>
+                <figure className='flex flex-row  gap-x-2'>
+                  <img src={loc} className="sm:w-[2.5%] w-[4%]" />
+                  <p className="text-left font-Nunito-Sans text-[#aeaeae] sm:text-[22px] text-[16px]">{villa.address}</p>
+                </figure>
+                <footer className="flex  xl:w-[60%] justify-between lg:w-[90%] sm:w-[60%] w-[100%]  text-sm">
+
+                  <figure className='flex flex-row xl:gap-x-2'>
+                    <img src={bathtub} className="" /> 
+                    <p className="text-left font-semibold font-Nunito-Sans text-[#626262]  text-[16px] sm:text-[22px]">{villa.bath}
+                    </p>
+                  </figure>
+
+                  <figure className='flex flex-row gap-x-2'>
+                    <img src={room} className="" />
+                    <p className="text-left font-semibold font-Nunito-Sans text-[#626262]  text-[16px] sm:text-[22px]"> {villa.beds}
+                    </p>
+                  </figure>
+
+
+                  <figure className='flex flex-row gap-x-2'>
+                    <img src={house} className="" /> 
+                    <p className="text-left font-semibold font-Nunito-Sans text-[#626262]  text-[16px] sm:text-[22px]">{villa.size}
+                    </p>
+                  </figure>
+                </footer>
+
+              </article>
+            </section>
+
+
+            <section className='h-15 flex justify-around items-center gap-x-1 bg-[#f4f4f4] w-full mt-16'>
+
+              <h1
+                className={` py-3 cursor-pointer font-mulish xl:text-[18px] sm:text-[16px] text-[12px]  font-semibold text-[#8a8a8a] ${activeSection === 'layout' ? 'text-[#181725] border-b-3 border-[#6d87cb]' : ''}`}
+                onClick={() => setActiveSection('layout')}
+              >
+                PROPERTY LAYOUT
+              </h1>
+
+              <h1
+                className={`py-3 cursor-pointer font-mulish xl:text-[18px] sm:text-[16px] text-[12px]   font-semibold text-[#8a8a8a] ${activeSection === 'description' ? 'text-[#181725] border-b-3 border-[#6d87cb]' : ''}`}
+                onClick={() => setActiveSection('description')}
+              >
+                DESCRIPTION
+              </h1>
+
+              <h1
+                className={`py-3 cursor-pointer font-mulish xl:text-[18px] sm:text-[16px] text-[12px]  font-semibold text-[#8a8a8a] ${activeSection === 'amenities' ? 'text-[#181725] border-b-3 border-[#6d87cb]' : ''}`}
+                onClick={() => setActiveSection('amenities')}
+              >
+                AMENITIES
+              </h1>
+            </section>
+            <section className="w-full">
+              {activeSection === "description" && <AboutSection layout={villa.desc.layout} />}
+              {activeSection === "layout" && <DescriptionSection desc={villa.desc.desc} />}
+              {activeSection === "amenities" && <Amenities amenities={villa.desc.aminities} />}
+            </section>
+
+
+          </aside>
+          <aside className="w-[35%] h-[500px]  lg:block overflow-x-hidden overflow-y-scroll">
+  <SideImages images={villa.images} />
+</aside>
+
+
+        </article>
+      </section>
+    </>
   )
 }
- 
-export default PropertyLayout
+
+export default DetailedVila

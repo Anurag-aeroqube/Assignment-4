@@ -33,20 +33,20 @@ const VCarousel = () => {
       <div className="relative">
         <img
           src={images[currentIndex]}
-          className="block  sm:h-[500px] xl:h-[520px] w-fit mx-auto rounded-lg"
+          className="block  sm:h-[500px] xl:h-[520px] w-full mx-auto rounded-lg"
           alt={`Slide ${currentIndex + 1}`}
         />
       </div>
  
       {/* Navigation Buttons */}
       <button
-        className="absolute top-1/2 left-6 transform -translate-y-1/2  text-white w-8 h-8 text-4xl flex items-center justify-center rounded-full shadow-lg hover:scale-110 transition"
+        className="absolute top-1/2 left-4 transform -translate-y-1/2  text-white w-8 h-8 text-4xl flex items-center justify-center rounded-full shadow-lg hover:scale-110 transition"
         onClick={goToPrevious}
       >
         ❮
       </button>
       <button
-        className="absolute top-1/2 right-6 transform -translate-y-1/2  text-white w-8 h-8 text-4xl flex items-center justify-center rounded-full shadow-lg hover:scale-110 transition"
+        className="absolute top-1/2 right-4 transform -translate-y-1/2  text-white w-8 h-8 text-4xl flex items-center justify-center rounded-full shadow-lg hover:scale-110 transition"
         onClick={goToNext}
       >
         ❯

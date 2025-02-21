@@ -7,7 +7,7 @@ type SideImagesProps = {
 const SideImages: React.FC<SideImagesProps> = ({ images }) => {
   return (
     <section className="">
-      <div className='grid xl:grid-cols-2 grid-cols-1 hy-auto '>
+      <div className='grid lg:grid-cols-2  hy-auto  gap-5'>
       {images.map((image, index) => (
         <img
           key={index}

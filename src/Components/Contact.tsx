@@ -1,6 +1,6 @@
 import React from "react";
 import locationpin from '../assets/location-pin.svg'
-import message from '../assets/Group (3).svg'
+import message from '../assets/phone.svg'
 import vector from '../assets/Vector.svg'
 import facebook from '../assets/Group 3037.svg'
 import instragram from '../assets/Group 3038.svg'

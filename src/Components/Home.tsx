@@ -82,7 +82,7 @@ const Home = () => {
       {/* on call cook */}
       <section className='lg:py-14 sm:py-10' >
         <article className='w-full'>
-          <div className='lg:w-[70%] w-[80%] mx-auto flex lg:flex-row flex-col  md:justify-between'>
+          <div className='lg:w-[70%] md:w-[80%] w-[90%] mx-auto flex lg:flex-row flex-col  md:justify-between'>
             <header className='lg:w-[50%] py-20 space-y-8'>
               <p className='text-[#373f41] font-kanit text-[32px] leading-[40px] lg:text-left text-center tracking-[0.1px]'>On Call Cook</p>
               <p className='font-mulish text-[20px] text-[#737b7d] leading-[32px] tracking[0.3px] '>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
@@ -104,7 +104,7 @@ const Home = () => {
 <section className='lg:py-14 sm:py-10' >
         <article className='w-full'>
        
-          <div className='lg:w-[70%] w-[80%] mx-auto flex lg:flex-row flex-col-reverse  md:justify-between'>
+          <div className='lg:w-[70%] md:w-[80%] w-[90%]  mx-auto flex lg:flex-row flex-col-reverse  md:justify-between'>
           <figure className='lg:w-[50%] '>
               <img src={laundary} className='w-[70%] mx-auto '></img>
             </figure>
@@ -125,7 +125,7 @@ const Home = () => {
 
       <section className='lg:py-14 sm:py-10' >
         <article className='w-full'>
-          <div className='lg:w-[70%] w-[80%] mx-auto flex lg:flex-row flex-col  md:justify-between'>
+          <div className='lg:w-[70%] md:w-[80%] w-[90%]  mx-auto flex lg:flex-row flex-col  md:justify-between'>
             <header className='lg:w-[50%] py-20 space-y-8'>
               <p className='text-[#373f41] font-kanit text-[32px] leading-[40px] lg:text-left text-center tracking-[0.1px]'>Facility Cleaning Services</p>
               <p className='font-mulish text-[20px] text-[#737b7d] leading-[32px] tracking[0.3px] '>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
@@ -145,7 +145,7 @@ const Home = () => {
       <section className='lg:py-14 py-10 mb-20 ' >
         <article className='w-full'>
        
-          <div className='lg:w-[70%] w-[80%] mx-auto flex lg:flex-row flex-col-reverse gap-x-5 lg:justify-between'>
+          <div className='lg:w-[70%] md:w-[80%] w-[90%]  mx-auto flex lg:flex-row flex-col-reverse gap-x-5 lg:justify-between'>
           <figure className='lg:w-[48%] mx-auto sm:pt-0 pt-10 '>
               <img src={maintenance} className='w-[90%]  my-auto '></img>
             </figure>
