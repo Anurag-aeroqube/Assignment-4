@@ -71,8 +71,8 @@ const Home = () => {
               <h1 className=' text-[32px] font-kanit text-[#373f41] md:leading-[1.5] leading-[1.3] text-center'>Feature regarding purchase of villa & also rent out feature with villacrest</h1>
               <p className='text-[20px]  text-[#737b7d]  mt-5 lg:w-[88%] mx-auto  w-[94%]  text-center'>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
             </div>
-            <div className=' mt-7 pb-4'>
-              <img src={section3} className=' w-full mx-auto '></img>
+            <div className=' mt-7 '>
+              <img src={section3} className=' w-[90%]  mx-auto '></img>
             </div>
           </div>
         </article>
@@ -166,14 +166,14 @@ const Home = () => {
 
       <section>
         <article className='w-full bg-[#3c64b1]/10'>
-          <div className='xl:w-[70%] md:w-[80%] w-[90%]  mx-auto flex lg:flex-row flex-col gap-3 py-8 '>
-            <header className='lg:w-[54%] py-10  '>
+          <div className='xl:w-[70%] md:w-[80%] w-[90%]  mx-auto flex lg:flex-row flex-col gap-x-20  '>
+            <header className='lg:w-[54%] mt-16   '>
               <header>
-                <p className=' text-[24px] sm:text-left text-center leadinng-[40px] tracking-[0.1px] font-kanit '>Title for the key features of the villa goes here</p>
-                <p className=' text-[15px] lg:w-[94%] w-[96%] mx-auto  text-[#737b7d] md:leading-[32px] leading-[24px]  py-6 tracking-[0.3px] font-mulish '>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                <p className=' text-[32px] sm:text-left text-center leadinng-[40px] tracking-[0.1px] font-kanit '>Title for the key features of the villa goes here</p>
+                <p className=' text-[20px]  mx-auto  text-[#737b7d] md:leading-[32px]  py-6 tracking-[0.3px] font-mulish '>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
               </header>
 
-              <div className='flex md:flex-row flex-col lg:justify-between justify-around w-[96%]'>
+              <div className='flex md:flex-row flex-col lg:justify-between justify-around w-[96%] py-3'>
                 <ul className="sm:space-y-4 space-y-1 list-disc list-inside   marker:text-[#3c64b1]">
                   <li className=" font-manrope lg:text-[18px] text-[16px] font-semibold">Tailored services</li>
                   <li className="font-manrope lg:text-[18px] text-[16px]  font-semibold">Effortless arrivals</li>
@@ -186,13 +186,13 @@ const Home = () => {
                 </ul>
               </div>
 
-              <footer className='w-[34%] lg:mx-0 mx-auto'>
-                <button className='bg-[#6d87cb] font-mulish w-fit mx-auto py-2 px-4 mt-10 text-white  xl:text-[18px] lg:text-[16px] text-[14px]  '>View Details</button>
+              <footer className='md:w-[34%] w-[40%] lg:mx-0 mx-auto'>
+                <button className='bg-[#6d87cb] font-mulish w-fit mx-auto py-2 px-4  mt-8 mb-4 lg:mb-6 text-white  xl:text-[18px] lg:text-[16px] text-[14px]  '>View Details</button>
               </footer>
 
             </header>
             <figure className='lg:w-[46%]  '>
-              <img src={section5} className='xl:w-[95%] mx-auto mt-10'></img>
+              <img src={section5} className='xl:w-[95%] mx-auto my-5'></img>
             </figure>
           </div>
         </article>
@@ -225,7 +225,7 @@ const Home = () => {
       <article className='xl:w-[70%] md:w-[80%] w-[90%] mx-auto pt-5'>
       <div className=' flex  flex-col  gap-y-7 pb-20 '>
           <p className='text-[32px] font-kanit text-center text-[#373f41] leading-[50px]  '>Why Choose VillaCrest?</p>
-          <p className=' text-[16px] text-center font-mulish  leading-[30px] xl:w-[60%] tracking-[0.3px]  mx-auto  text-[#737b7d]'>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+          <p className=' text-[16px] text-center font-mulish  leading-[26px] xl:w-[60%] tracking-[0.3px]  mx-auto  text-[#737b7d]'>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
           <button className='bg-[#6d87cb] font-mulish font-bold text-[14px] w-fit mx-auto py-3 px-7 text-white '>Contact</button>
 
         </div>

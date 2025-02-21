@@ -1,96 +1,90 @@
 import { useState } from 'react';
-import gallery1 from "../assets/gallery-1.png";
-import gallery2 from "../assets/gallery-2.png";
-import gallery3 from "../assets/gallery-3.png";
-import VCrousel from './VCrousel';
-import location from '../assets/location-pin.svg';
-import bathtub from '../assets/bathtub.svg';
-import room from '../assets/double-bed.svg';
-import house from '../assets/measured.svg';
-import Description from './Description';
-import PropertyLayout from './PropertyLayout';
-import Amenities from './Ammenties';
+import villas from '../VillasData/Data';
+import { useParams } from 'react-router-dom';
 
-const villas = [
-  { id: 1, image: gallery3, title: "Hilltruck Valley", price: "₹375,000", address: "1187 Lake Forest City, Uttrakhand", bath: "2 Bath", beds: "4 Beds", size: "2986 sqft" }
-];
+import VCrousel from '../Components/VCrousel'
 
-const villa = villas[0];
+import loc from '../assets/location-pin.svg'
+import bathtub from '../assets/bathtub.svg'
+import room from '../assets/double-bed.svg'
+import house from '../assets/measured.svg'
+import DescriptionSection from '../Components/Description'
+import AboutSection from '../Components/PropertyLayout'
+import Amenities from '../Components/Ammenties'
+import SideImages from '../Components/Villasimages';
 
-const VillasDetails = () => {
-  const [activeSection, setActiveSection] = useState('description');
-  return (
-    <>
-      <section className='w-full mb-[8rem] mt-[5rem]'>
-        <div className='w-[80%] mt-15 mx-auto'>
-          <section className='grid grid-cols-3 w-full mx-auto gap-6'>
-            <div className='col-span-2'>
-              <VCrousel />
-            </div>
-            <div className='col-span-1 grid grid-cols-2 gap-7'>
-              <img src={gallery1}></img>
-              <img src={gallery2}></img>
-              <img src={gallery2}></img>
-              <img src={gallery1}></img>
-              <img src={gallery1}></img>
-              <img src={gallery2}></img>
-              <img src={gallery2}></img>
-              <img src={gallery1}></img>
-            </div>
-          </section>
 
-          <section className='grid grid-cols-3'>
-            <div className='col-span-2'>
-              <div className='bg-[#ffffff] shadow-md shadow-[#00000011]/7 border border-gray-200 p-4 mt-4 rounded-md text-center'>
-                <div className='flex flex-row justify-between'>
-                  <p className='font-Nunito-Sans font-bold  text-[#3e3e3e] lg:text-[1.6rem] text-[0.7rem]'>{villa.title}</p>
-                  <p className='text-[#ffa800] font-bold text-[1.6rem]'>{villa.price}</p>
-                </div>
-                <figure className='flex space-x-2 '>
-                <img src={location} className="w-[1.5%]" />
-                <p className='text-[#aeaeae] font-Nunito-Sans text-[1.3rem] text-left py-3'>{villa.address}</p>
-                  
-                </figure>
-               
-                <div className='flex flex-row gap-x-14  mx-auto'>
-                  
-                  <p className='text-[#626262] font-Nunito-Sans font-semibold text-[1.3rem]'><img src={bathtub} className="inline" /> {villa.bath}</p>
-                  <p className='text-[#626262] font-Nunito-Sans font-semibold text-[1.3rem]'><img src={room} className="inline" /> {villa.beds}</p>
-                  <p className='text-[#626262] font-Nunito-Sans font-semibold text-[1.3rem]'><img src={house} className="inline" /> {villa.size}</p>
-                </div>
-              </div>
-            </div>
-          </section>
+const DetailedVila = () => {
+    const { id } = useParams(); 
+    const villa = villas.find((v) => v.id === Number(id)); 
+    const [activeSection, setActiveSection] = useState('description');
+  
+    if (!villa) {
+      return <h1>Villa Not Found</h1>;
+    }
 
-          <section className='h-15 flex justify-around items-center bg-[#f4f4f4] w-2/3 mt-10'>
-            <h1
-              className={`cursor-pointer px-4 py-2 font-mulish font-bold text-[#181725] ${activeSection === 'layout' ? 'border-b-2 border-blue-500' : 'text-[#8a8a8a] font-mulish font-semibold'}`}
-              onClick={() => setActiveSection('layout')}
-            >
-               PROPERTY LAYOUT
-            </h1>
-            <h1
-              className={`cursor-pointer px-4 py-2 font-mulish font-bold text-[#181725] ${activeSection === 'description' ? 'border-b-2 border-blue-500' : 'text-[#8a8a8a] font-mulish font-semibold'}`}
-              onClick={() => setActiveSection('description')}
-            >
-              DESCRIPTION
-            </h1>
-            <h1
-              className={`cursor-pointer px-4 py-2 font-mulish font-bold text-[#181725] ${activeSection === 'amenities' ? 'border-b-2 border-blue-500' : 'text-[#8a8a8a] font-mulish font-semibold'}`}
-              onClick={() => setActiveSection('amenities')}
-            >
-              AMENITIES
-            </h1>
-          </section>
-          <section className='w-2/3'>
-            {activeSection === 'layout' && <PropertyLayout />}
-            {activeSection === 'description' && <Description />}
-            {activeSection === 'amenities' && <Amenities />}
-          </section>
-        </div>
+    return (
+      <>
+      <section className='w-full  mb-[8rem] mt-[5rem]'>
+        <article className='w-[70%] mx-auto flex  '>
+          <aside className='w-full mx-auto'>
+              <section className='w-fit mx-auto'>
+                  <VCrousel/>
+              </section>
+              <section className='w-full h-[217px] shadow-lg'>
+              <article className="flex flex-col gap-3 p-20 mt-20">
+                    <header className="flex justify-between font-bold">
+                      <h1 className="font-nunitosans font-bold text-[28px] text-[#3e3e3e] leading-[27.2px]">{villa.title}</h1>
+                      <h1 className="font-nunitosans font-bold text-[28px] text-[#ffa800] leading-[27.2px]">{villa.price}</h1>
+                    </header>
+  
+                    <p className="text-left font-nunitosans text-[#aeaeae] text-[22px]"><img src={loc} className="inline" />{villa.address}</p>
+                    <footer className="flex justify-between text-sm">
+                      <p className="text-left font-semibold font-nunitosans text-[#626262] text-[22px]"><img src={bathtub} className="inline" /> {villa.bath}</p>
+                      <p className="text-left font-semibold font-nunitosans text-[#626262] text-[22px]"><img src={room} className="inline" /> {villa.beds}</p>
+                      <p className="text-left font-semibold font-nunitosans text-[#626262] text-[22px]"><img src={house} className="inline" /> {villa.size}</p>
+                    </footer>
+                  </article>
+              </section>
+  
+              <section className='h-15 flex justify-around items-center bg-[#f4f4f4] w-full mt-15'>
+              <h1 
+                      className={`py-3 cursor-pointer font-mulish text-[18px] font-bold text-[#8a8a8a] ${activeSection === 'description' ? 'text-[#181725] border-b-4 border-[#6d87cb]' : ''}`} 
+                      onClick={() => setActiveSection('description')}
+                  >
+                      DESCRIPTION
+                  </h1>
+                  <h1 
+                      className={` py-3 cursor-pointer font-mulish text-[18px] font-bold text-[#8a8a8a] ${activeSection === 'layout' ? 'text-[#181725] border-b-4 border-[#6d87cb]' : ''}`} 
+                      onClick={() => setActiveSection('layout')}
+                  >
+                      PROPERTY LAYOUT
+                  </h1>
+  
+                  <h1 
+                      className={`py-3 cursor-pointer font-mulish text-[18px] font-bold text-[#8a8a8a] ${activeSection === 'amenities' ? 'text-[#181725] border-b-4 border-[#6d87cb]' : ''}`} 
+                      onClick={() => setActiveSection('amenities')}
+                  >
+                      AMENITIES
+                  </h1>
+              </section>
+              <section className="w-full">
+  {activeSection === "layout" && <AboutSection layout={villa.desc.layout} />}
+  {activeSection === "description" && <DescriptionSection desc={villa.desc.desc} />}
+  {activeSection === "amenities" && <Amenities amenities={villa.desc.aminities} />}
+</section>
+
+
+          </aside>
+          <aside className="w-[30%]">
+            
+  <SideImages images={villa.images} />
+</aside>
+
+        </article>
       </section>
-    </>
-  );
-};
+      </>
+  )
+}
 
-export default VillasDetails;
+export default DetailedVila

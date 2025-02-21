@@ -43,6 +43,7 @@ function App() {
         <Route path="/" element={<Partners />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/villasdetails" element={<VillasDetails/>} />
+        <Route path="/villa/:id" element={<VillasDetails />} />
       </Routes>
       </Layout>
      
