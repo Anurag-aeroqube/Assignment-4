@@ -1,4 +1,4 @@
-import React from 'react'
+
 import aboutimg from '../assets/about-img.png'
 import vision from '../assets/vision.png'
 import misiion from '../assets/mission.png'

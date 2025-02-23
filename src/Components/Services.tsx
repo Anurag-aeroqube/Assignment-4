@@ -1,4 +1,4 @@
-import React from "react";
+
 import cook from '../assets/cook.png'
 import laundary from '../assets/laundry.png'
 import Cleaning from '../assets/cleaning.png'

@@ -1,4 +1,4 @@
-import React from "react";
+
 import locationpin from '../assets/location-pin.svg'
 import message from '../assets/phone.svg'
 import vector from '../assets/Vector.svg'
