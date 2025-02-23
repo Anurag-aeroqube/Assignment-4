@@ -15,7 +15,8 @@ function Services() {
       </h2>{/*  call cook hai */}
 
 
-      <section className='lg:py-14 sm:py-10' >
+       {/* on call cook */}
+       <section className='lg:py-14 sm:py-10' >
         <article className='w-full'>
           <div className='lg:w-[70%] md:w-[80%] w-[90%] mx-auto flex lg:flex-row flex-col  md:justify-between'>
             <header className='lg:w-[50%] xl:py-20 lg:py-0 py-20 space-y-8'>
@@ -23,7 +24,7 @@ function Services() {
               <p className='font-mulish text-[20px] text-[#737b7d] leading-[32px] tracking[0.3px] '>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
             </header>
             <figure className='lg:w-[50%] '>
-              <img src={cook} className=' w-[70%] sm:w-[50%] lg:w-[70%] mx-auto lg:ml-30'></img>
+              <img src={cook} alt='cook' className=' w-[70%] sm:w-[50%] lg:w-[70%] mx-auto lg:ml-30'></img>
             </figure>
 
           </div>
@@ -41,7 +42,7 @@ function Services() {
        
           <div className='lg:w-[70%] md:w-[80%] w-[90%]  mx-auto flex lg:flex-row flex-col-reverse  md:justify-between'>
           <figure className='lg:w-[50%] '>
-              <img src={laundary} className='w-[70%] sm:w-[50%] lg:w-[70%] lg:ml-10 mx-auto '></img>
+              <img src={laundary} alt='laundary' className='w-[70%] sm:w-[50%] lg:w-[70%] lg:ml-10 mx-auto '></img>
             </figure>
 
             <header className='lg:w-[50%] xl:py-20 lg:py-0 py-20  space-y-8'>
@@ -55,7 +56,6 @@ function Services() {
 
       </section>
 
-
       {/* facility cleaning services */}
 
       <section className='lg:py-14 sm:py-10' >
@@ -66,7 +66,7 @@ function Services() {
               <p className='font-mulish text-[20px] text-[#737b7d] leading-[32px] tracking[0.3px] '>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
             </header>
             <figure className='lg:w-[50%]  '>
-              <img src={Cleaning} className='xl:w-[70%] sm:w-[50%] lg:w-[95%] mx-auto xl:ml-30 lg:ml-20'></img>
+              <img src={Cleaning} alt='cleaning' className='xl:w-[70%] sm:w-[50%] lg:w-[95%] mx-auto xl:ml-30 lg:ml-20'></img>
             </figure>
 
           </div>
@@ -82,7 +82,7 @@ function Services() {
        
           <div className='lg:w-[70%] md:w-[80%] w-[90%]  mx-auto flex lg:flex-row flex-col-reverse gap-x-9 lg:justify-between'>
           <figure className='lg:w-[48%] mx-auto sm:pt-0 pt-10 '>
-              <img src={Maintenance} className='xl:w-[90%] lg:lg:w-[99%] w-[80%] mt-6 my-auto '></img>
+              <img src={Maintenance} alt='maintenance' className='xl:w-[90%] lg:lg:w-[99%] w-[80%] mt-6 my-auto '></img>
             </figure>
 
             <header className='lg:w-[52%]   space-y-8'>
