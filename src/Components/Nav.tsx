@@ -12,7 +12,7 @@ function Navbar() {
       <div className="flex justify-between items-center w-full">
         {/* Logo */}
         <div className="md:w-1/4">
-          <figure className="sm:w-[70%] md:w-[80%] xl:mx-20 sm:px-0 w-[100%] mx-auto sm:my-2">
+          <figure className="sm:w-[70%] md:w-[80%] xl:mx-32 sm:px-0 w-[100%] mx-auto sm:my-2">
             <Link to="/home">
               <img
                 src={villacrest}
@@ -63,43 +63,52 @@ function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Menu (Only visible when isOpen is true) */}
-      {isOpen && (
-        <div className="sm:hidden absolute top-16 left-0 w-full bg-white shadow-lg py-5">
-          <ul className="flex flex-col items-center space-y-4">
-            {[
-              { name: "Home", path: "/home" },
-              { name: "About Us", path: "/about" },
-              { name: "Villas", path: "/villas" },
-              { name: "Services", path: "/services" },
-              { name: "Partner with us", path: "/partners" },
-            ].map((item) => (
-              <li key={item.path}>
-                <Link
-                  to={item.path}
-                  onClick={() => setIsOpen(false)} // Close menu on click
-                  className={`font-mulish text-lg ${
-                    location.pathname === item.path
-                      ? "text-blue-500 font-bold"
-                      : "text-[#373f41] hover:text-blue-500"
-                  }`}
-                >
-                  {item.name}
-                </Link>
-              </li>
-            ))}
-            <li>
+      {/* Mobile Menu (Right Side Sliding) */}
+      <div
+        className={`sm:hidden fixed top-0 right-0 h-full w-2/3 bg-white shadow-lg py-5 transform transition-transform duration-300 ease-in-out ${
+          isOpen ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        <button
+          onClick={() => setIsOpen(false)}
+          className="absolute top-5 right-5 text-3xl"
+        >
+          <HiX />
+        </button>
+
+        <ul className="flex flex-col items-center space-y-6 mt-16">
+          {[
+            { name: "Home", path: "/home" },
+            { name: "About Us", path: "/about" },
+            { name: "Villas", path: "/villas" },
+            { name: "Services", path: "/services" },
+            { name: "Partner with us", path: "/partners" },
+          ].map((item) => (
+            <li key={item.path}>
               <Link
-                to="/contact"
+                to={item.path}
                 onClick={() => setIsOpen(false)}
-                className="bg-[#6d87cb] text-white px-5 py-2 rounded-md hover:bg-blue-700"
+                className={`font-mulish text-lg ${
+                  location.pathname === item.path
+                    ? "text-blue-500 font-bold"
+                    : "text-[#373f41] hover:text-blue-500"
+                }`}
               >
-                Contact
+                {item.name}
               </Link>
             </li>
-          </ul>
-        </div>
-      )}
+          ))}
+          <li>
+            <Link
+              to="/contact"
+              onClick={() => setIsOpen(false)}
+              className="bg-[#6d87cb] text-white px-5 py-2 rounded-md hover:bg-blue-700"
+            >
+              Contact
+            </Link>
+          </li>
+        </ul>
+      </div>
     </nav>
   );
 }

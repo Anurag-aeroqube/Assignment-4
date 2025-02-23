@@ -1,35 +1,25 @@
 import React from 'react';
 import { Amenity } from '../Villastypes/Type1';
-import logo from '../assets/Group (1).svg';
+// import logo from '../assets/Group (1).svg';
 interface AmenityProps {
   amenities: Amenity[];
 }
-
+ 
 const Amenities: React.FC<AmenityProps> = ({ amenities }) => {
   return (
     <>
-<section className='w-full grid md:grid-cols-3 grid-cols-2  mx-auto gap-x-10 gap-y-10  mt-15'>
+<section className='w-full grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-10 mt-10'>
   {
     amenities.map((item,index)=>(
-      <header className='bg-[#6d87cb] rounded-sm xl:py-16  py-12'>
-        <div className='  flex flex-col sm:justify-center justify-between items-center sm:w-full w-[50%]  gap-4 mx-auto '>
-          <figure className='sm:w-[80px] sm:h-[80px]'>
-          <img src={item.logo} alt="" className='w-fit mx-auto my-auto ' />
-
-          </figure>
-  
-  
-  <p className='text-[#ffffff] font-mulish text-[14px] text-center font-extrabold'>{item.title}</p>
-</div>
-
-      </header>
-      
+      <div key={index} className='h-[10rem] w-[10rem] md:h-[12.5rem] md:w-[12.5rem] bg-[#6d87cb] flex flex-col justify-center items-center rounded-sm gap-4 mx-auto'>
+      <img src={item.logo} alt="" />
+      <p className='text-[#ffffff] font-navabarLinks text-[10px] sm:text-[14px] font-extrabold'>{item.title}</p>
+    </div>
     ))
   }
     </section>
     </>
   );
 };
-
+ 
 export default Amenities;
-

@@ -5,27 +5,24 @@ import villas from '../VillasData/Data';
 import Villacard from '../Components/Villacard';
 
 const Villas = () => {
-
-    return (
-      <section className='w-full my-[5rem] '>
+  return (
+    <section className='w-full my-[5rem] '>
         <article className='w-[85%] mx-auto'>
-          <article className="mb-6 sm:mb-6 xl:w-[28%] lg:w-[40%] md:w-[50%] mx-auto text-center">
-            <h1 className="font-kanit text-[2rem] text-[#373f41]">
-              Let's explore the villas of your dreams
-            </h1>
-            
-              
-            
-          </article>
-  
-          <div className='grid grid-cols-1 space-y-10 gap-8 sm:grid-cols-2 lg:grid-cols-3 sm:space-y-35'>
-  {villas.map((villa) => (
-    <Villacard key={villa.id} villa={villa} />
-  ))}
-</div>
+            <article className="mb-[1rem] xl:mb-[1rem] sm:w-[60%] md:w-[50%] w-[90%] lg:w-[40%] xl:w-[30%] mx-auto text-center">
+                <h1 className="font-kanit text-[2rem] text-[#373f41] pb-6">
+                    Let's explore the villas of your dreams
+                </h1>
+            </article>
+
+            <div className='grid grid-cols-1 gap-3 sm:gap-6 md:gap-3 lg:gap-8  sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-5'>
+                {villas.map((villa) => (
+                    <Villacard key={villa.id} villa={villa} />
+                ))}
+            </div>
         </article>
-      </section>
-    );
+    </section>
+);
 }
+
 
 export default Villas

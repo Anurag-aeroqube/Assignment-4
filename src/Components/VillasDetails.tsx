@@ -17,7 +17,7 @@ import SideImages from '../Components/Villasimages';
 const DetailedVila = () => {
   const { id } = useParams();
   const villa = villas.find((v) => v.id === Number(id));
-  const [activeSection, setActiveSection] = useState('description');
+  const [activeSection, setActiveSection] = useState('layout');
 
   if (!villa) {
     return <h1>Villa Not Found</h1>;
@@ -27,7 +27,7 @@ const DetailedVila = () => {
     <>
       <section className='w-full  mb-[8rem] mt-[5rem]'>
         <article className='lg:w-[80%]  flex lg:flex-row flex-col mx-auto gap-x-5 w-[96%] '>
-          <aside className='w-[70%]  mx-auto'>
+          <aside className='lg:w-[70%] w-[95%] mx-auto'>
             <section className='mx-auto'>
               <VCrousel />
             </section>
@@ -73,7 +73,7 @@ const DetailedVila = () => {
             </section>
 
 
-            <section className='h-15 flex justify-around items-center gap-x-1 bg-[#f4f4f4] w-full mt-16'>
+            <section className='h-15 flex justify-around items-center gap-x-1    bg-[#f4f4f4] w-full mt-16'>
 
               <h1
                 className={` py-3 cursor-pointer font-mulish xl:text-[18px] sm:text-[16px] text-[12px]  font-semibold text-[#8a8a8a] ${activeSection === 'layout' ? 'text-[#181725] border-b-3 border-[#6d87cb]' : ''}`}

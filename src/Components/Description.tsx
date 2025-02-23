@@ -12,9 +12,9 @@ const DescriptionSection: React.FC<DescriptionSectionProps> = ({ desc }) => {
         Description:
       </h1>
 
-      <ol className="list-decimal text-[#737b7d] pl-4">
+      <ol className="list-decimal text-[#737b7d] ">
         {desc.description.map((text, index) => (
-          <li key={index} className="py-4 font-mulish text-left text-[18px] text-[#737b7d]">
+          <li key={index} className="py-4 font-mulish text-left w-[90%] sm:w-full mx-auto text-[18px] text-[#737b7d]">
             {text}
           </li>
         ))}
@@ -23,7 +23,7 @@ const DescriptionSection: React.FC<DescriptionSectionProps> = ({ desc }) => {
       <section>
         <article className="flex flex-col items-start justify-start w-full">
           <div className="text-left py-2">
-            <span className="font-mulish font-bold text-[24px]  text-start text-[#373f41]">
+            <span className="font-mulish font-bold sm:text-[24px] text-[22px]  text-start text-[#373f41]">
               Address: 
             </span>
             <p className="font-mulish font-semibold text-[20px] text-[#737b7d] inline">
@@ -35,7 +35,7 @@ const DescriptionSection: React.FC<DescriptionSectionProps> = ({ desc }) => {
 
         <article className="flex flex-col items-start justify-start w-full">
           <div className="text-left py-2">
-            <span className="font-mulish font-bold text-[24px] text-[#373f41]">
+            <span className="font-mulish font-bold sm:text-[24px] text-[22px]  text-[#373f41]">
               Contact No.: 
             </span>
             <p className="font-mulish font-semibold text-[20px] text-[#737b7d] inline">
@@ -47,7 +47,7 @@ const DescriptionSection: React.FC<DescriptionSectionProps> = ({ desc }) => {
 
         <article className="flex flex-col items-start justify-start w-full">
           <div className="text-left py-2">
-            <span className="font-mulish font-bold text-[24px] text-[#373f41]">
+            <span className="font-mulish font-bold sm:text-[24px] text-[22px]  text-[#373f41]">
               Beds: 
             </span>
             <p className="font-mulish font-semibold text-[20px] text-[#737b7d] inline">
@@ -59,7 +59,7 @@ const DescriptionSection: React.FC<DescriptionSectionProps> = ({ desc }) => {
 
         <article className="flex flex-col items-start justify-start w-full">
           <div className="text-left py-2">
-            <span className="font-mulish font-bold text-[24px] text-[#373f41]">
+            <span className="font-mulish font-bold sm:text-[24px] text-[22px]  text-[#373f41]">
               Check-In: 
             </span>
             <p className="font-mulish font-semibold text-[20px] text-[#737b7d] inline">
@@ -71,7 +71,7 @@ const DescriptionSection: React.FC<DescriptionSectionProps> = ({ desc }) => {
 
         <article className="flex flex-col items-start justify-start w-full">
           <div className="text-left py-2">
-            <span className="font-mulish font-bold text-[24px] text-[#373f41]">
+            <span className="font-mulish font-bold sm:text-[24px] text-[22px]  text-[#373f41]">
               Check-Out: 
             </span>
             <p className="font-mulish font-semibold text-[20px] text-[#737b7d] inline">

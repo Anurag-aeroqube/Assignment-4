@@ -16,7 +16,7 @@ const Carousel = () => {
     };
  
     return (
-        <div className="relative w-full max-w-5xl mx-auto">
+        <div className="relative w-full mx-auto">
             {/* Image Container with LOWER HEIGHT */}
             <div className="relative h-40 sm:h-52 md:h-64 lg:h-72 xl:h-[350px] overflow-hidden rounded-lg">
                 {images.map((image, index) => (
