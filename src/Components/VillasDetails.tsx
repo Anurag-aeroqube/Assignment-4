@@ -12,6 +12,7 @@ import DescriptionSection from '../Components/Description'
 import AboutSection from '../Components/PropertyLayout'
 import Amenities from '../Components/Ammenties'
 import SideImages from '../Components/Villasimages';
+import Hcrousel from '../Components/Hcrousel';
 
 
 const DetailedVila = () => {
@@ -31,6 +32,11 @@ const DetailedVila = () => {
             <section className='mx-auto'>
               <VCrousel />
             </section>
+
+            <section className="lg:hidden sm:pt-5 pt-3 w-full sm:h-[150px] h-[100px] block  overflow-y-hidden overflow-x-scroll">
+  <Hcrousel images={villa.images} />
+</section>
+
 
 
             <section className='w-full mx-auto '>
