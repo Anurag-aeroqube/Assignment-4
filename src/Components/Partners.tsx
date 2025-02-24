@@ -18,7 +18,7 @@ export default function WelcomeButton() {
       {showText && (
         <div className="mt-5 flex flex-col items-center">
           <motion.h1
-            className="text-4xl font-extrabold font-Nunito-Sans   text-[#373f41]"
+            className="sm:text-4xl sm:font-extrabold text-3xl font-bold font-Nunito-Sans   text-[#373f41]"
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
