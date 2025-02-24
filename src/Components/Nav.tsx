@@ -1,4 +1,4 @@
-import  { useState } from "react";
+import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { HiMenu, HiX } from "react-icons/hi"; // Hamburger Icons
 import villacrest from "../assets/logo.png";
@@ -8,10 +8,10 @@ function Navbar() {
   const [isOpen, setIsOpen] = useState(false); // Hamburger Menu Toggle State
 
   return (
-    <nav className="shadow-sm sm:p-4 p-3 items-center bg-[#3c64b1]/6">
+    <nav className="shadow-sm sm:p-4 p-3 items-center bg-[#3c64b1]/6 relative">
       <div className="flex justify-between items-center w-full">
         {/* Logo */}
-        <div className="md:w-1/4">
+        <div className="md:w-1/4 flex items-center justify-between w-full">
           <figure className="sm:w-[70%] md:w-[80%] xl:mx-32 sm:px-0 w-[100%] mx-auto sm:my-2">
             <Link to="/home">
               <img
@@ -21,6 +21,13 @@ function Navbar() {
               />
             </Link>
           </figure>
+
+          {/* ✅ Mobile Hamburger Icon - Aligned Properly */}
+          <div className="sm:hidden flex items-center absolute right-4 top-1/2 transform -translate-y-1/2">
+            <button onClick={() => setIsOpen(!isOpen)} className="text-3xl">
+              {isOpen ? <HiX /> : <HiMenu />}
+            </button>
+          </div>
         </div>
 
         {/* Desktop Navigation */}
@@ -54,21 +61,15 @@ function Navbar() {
             </Link>
           </li>
         </ul>
-
-        {/* Mobile Hamburger Icon */}
-        <div className="sm:hidden flex items-center">
-          <button onClick={() => setIsOpen(!isOpen)} className="text-3xl">
-            {isOpen ? <HiX /> : <HiMenu />}
-          </button>
-        </div>
       </div>
 
-      {/* Mobile Menu (Right Side Sliding) */}
+      {/* ✅ Mobile Sidebar Menu (Right Side Panel) */}
       <div
-        className={`sm:hidden fixed top-0 right-0 h-full w-2/3 bg-white shadow-lg py-5 transform transition-transform duration-300 ease-in-out ${
+        className={`sm:hidden fixed top-0 right-0 w-[70%] h-full bg-white shadow-lg py-5 z-50 transform transition-transform duration-300 ease-in-out ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
+        {/* Close Button */}
         <button
           onClick={() => setIsOpen(false)}
           className="absolute top-5 right-5 text-3xl"
