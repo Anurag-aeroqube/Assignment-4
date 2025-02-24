@@ -12,12 +12,12 @@ function Navbar() {
       <div className="flex justify-between items-center w-full">
         {/* Logo */}
         <div className="md:w-1/4 flex items-center justify-between w-full">
-          <figure className="sm:w-[70%] md:w-[80%] xl:mx-32 sm:px-0 w-[100%] mx-auto sm:my-2">
+          <figure className="sm:w-[70%] md:w-[80%]  sm:px-0 w-[100%] mx-auto sm:my-2">
             <Link to="/home">
               <img
                 src={villacrest}
                 alt="Villa Crest Logo"
-                className="sm:w-full md:w-[70%] xl:w-[55%] sm:mx-auto w-[60%] cursor-pointer"
+                className="sm:w-full md:w-[70%] xl:w-full xl:pl-30 sm:mx-auto w-[30%]  cursor-pointer"
               />
             </Link>
           </figure>
