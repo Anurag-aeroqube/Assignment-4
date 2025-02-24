@@ -39,11 +39,17 @@ function Contact() {
  
             </div>
  
-            <div className="flex mt-7 space-x-4 mt- items-left">
-              <img src={instragram} alt="" />
-              <img src={youtube} alt="" />
-              <img src={facebook} alt="" />
-            </div>
+            <div className="flex mt-7 space-x-4 items-left">
+            <a href="https://aeroqube.com" target="_blank" rel="noopener noreferrer">
+              <img src={instragram} alt="Instagram" />
+            </a>
+            <a href="https://aeroqube.com" target="_blank" rel="noopener noreferrer">
+              <img src={youtube} alt="YouTube" />
+            </a>
+            <a href="https://aeroqube.com" target="_blank" rel="noopener noreferrer">
+              <img src={facebook} alt="Facebook" />
+            </a>
+          </div>
           </div>
  
         </div>

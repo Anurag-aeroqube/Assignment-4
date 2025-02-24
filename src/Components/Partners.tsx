@@ -1,79 +1,48 @@
+import { useState } from "react";
+import { motion } from "framer-motion";
 
- 
+export default function WelcomeButton() {
+  const [showText, setShowText] = useState(false);
 
- 
-const PropertyLayout = () => {
   return (
-    <div className='flex flex-col mt-[60px]'>
-    <h1 className='font-mulish font-bold text-left text-[24px] '>Description:</h1>
- 
-    <ol className=' list-decimal text-[#737b7d] pl-4 mt-7'>
-        <li className='py-3 font-mulish text-left text-[18px] text-[#737b7d]'>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</li>
- 
-        <li className='py-3 font-mulish text-left text-[18px] text-[#737b7d]'>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</li>
- 
-        <li className='py-3 font-mulish text-left text-[18px] text-[#737b7d]'>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</li>
- 
-        <li className='py-3 font-mulish text-left text-[18px] text-[#737b7d]'>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</li>
- 
-        <li className='py-3 font-mulish text-left text-[18px] text-[#737b7d]'>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</li>
-    </ol>
- 
-    <section>
-    <article className='flex flex-col items-start justify-start w-full'>
-  <div className='text-left py-2'>
-    <span className='font-mulish font-bold text-[24px] text-[#373f41]'>Address : </span>
-    <p className='font-mulish font-semibold text-[20px] text-[#737b7d] inline'>
-      HOUSE NO.- 99, THAPLIYA MAEHRA , Vijraula, Naukukichiatal
-    </p>
-  </div>
-  <hr className="w-full border-t border-[#eaeaea]" />
-</article>
- 
-<article className='flex flex-col items-start justify-start w-full'>
-  <div className='text-left py-2'>
-    <span className='font-mulish font-bold text-[24px] text-[#373f41]'>Contact No. : </span>
-    <p className='font-mulish font-semibold text-[20px] text-[#737b7d] inline'>
-     8747593736
-    </p>
-  </div>
-  <hr className="w-full border-t border-[#eaeaea]" />
-</article>
- 
-<article className='flex flex-col items-start justify-start w-full'>
-  <div className='text-left py-2'>
-    <span className='font-mulish font-bold text-[24px] text-[#373f41]'>Beds : </span>
-    <p className='font-mulish font-semibold text-[20px] text-[#737b7d] inline'>
-    06 Beds
-    </p>
-  </div>
-  <hr className="w-full border-t border-[#eaeaea]" />
-</article>
- 
-<article className='flex flex-col items-start justify-start w-full'>
-  <div className='text-left py-2'>
-    <span className='font-mulish font-bold text-[24px] text-[#373f41]'>Check In : </span>
-    <p className='font-mulish font-semibold text-[20px] text-[#737b7d] inline'>
-      08
-    </p>
-  </div>
-  <hr className="w-full border-t border-[#eaeaea]" />
-</article>
- 
- 
-<article className='flex flex-col items-start justify-start w-full'>
-  <div className='text-left py-2'>
-    <span className='font-mulish font-bold text-[24px] text-[#373f41]'>Check Out : </span>
-    <p className='font-mulish font-semibold text-[20px] text-[#737b7d] inline'>
-      12
-    </p>
-  </div>
-  <hr className="w-full border-t border-[#eaeaea]" />
-</article>
-    </section>
+    <div className="flex flex-col items-center justify-center h-screen bg-[#3c64b1]/6 text-white">
+      {!showText && (
+        <motion.button
+          className="px-6 py-3 text-lg font-bold bg-blue-500 rounded-2xl shadow-lg hover:bg-blue-600 transition-all"
+          whileTap={{ scale: 0.9 }}
+          onClick={() => setShowText(true)}
+        >
+          Click Me
+        </motion.button>
+      )}
+      {showText && (
+        <div className="mt-5 flex flex-col items-center">
+          <motion.h1
+            className="text-4xl font-extrabold font-Nunito-Sans   text-[#373f41]"
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            Welcome to Villacrest
+          </motion.h1>
+          <motion.p
+            className="mt-2 text-2xl font-mulish font-semibold  text-red-600"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+          >
+            Page is under development
+          </motion.p>
+          <motion.img
+            src="https://cdn-icons-png.flaticon.com/512/1506/1506764.png"
+            alt="Under Construction"
+            className="mt-3 w-20 h-20"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+          />
+        </div>
+      )}
     </div>
-   
-  )
+  );
 }
- 
-export default PropertyLayout

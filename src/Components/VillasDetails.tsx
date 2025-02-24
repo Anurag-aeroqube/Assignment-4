@@ -34,7 +34,8 @@ const DetailedVila = () => {
 
 
             <section className='w-full mx-auto '>
-              <article className="flex flex-col gap-5 shadow-[rgba(0,0,0,0.07)] shadow-lg sm:p-7 p-4 mt-10">
+            <article className="flex flex-col gap-5 shadow-[0px_0px_15px_rgba(0,0,0,0.15)] sm:p-7 p-4 mt-10 rounded-lg bg-white">
+
                 <header className="flex justify-between  font-bold">
                   <h1 className="font-Nunito-Sans font-bold md:text-[28px] sm:text-[24px] text-[20px] text-[#3e3e3e] md:leading-[47.6px]">
                     {villa.title}
